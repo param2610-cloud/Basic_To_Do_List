@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+</head>
+
+<body>
+    <div id="container" class="w-auto  min-h-screen max-h-auto  border-2 border-gray-400 p-4 flex flex-col">
+        <div id="Heading" class="m-2 text-2xl font-bold pl-5">
+            To Do List
+        </div>
+        <form id="Input_bar" class=" flex">
+            <input type="text" placeholder="Add Your Task" class="w-[90vw] rounded-lg" id="input_field">
+            <button type="submit" id="task_submit" class="border-2  rounded-lg px-6 mx-3 bg-blue-500 text-white">Submit</button>
+        </form>
+        <div id="task_pool" class=" flex flex-col p-3 pl-0">
+            <div  class="Task flex border border-black m-4 ml-0 rounded-lg p-4 text-md">
+                <button id="complete_button" class="px-3">
+                    <span class="material-symbols-outlined">
+                        radio_button_unchecked
+                    </span>
+                </button>
+                    <!-- <span class="material-symbols-outlined">
+                        radio_button_unchecked
+                    </span> -->
+                <div id="content" class="flex-grow text-xl font-medium">Task 1</div>
+                <button id="Edit" class="bg-black text-white px-4 py-1 rounded-lg mx-3">Edit</button>
+                <button id="Delete" class="bg-[#FF0000] text-white px-4 py-1 rounded-lg mx-3">Delete</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
