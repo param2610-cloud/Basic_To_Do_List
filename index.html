@@ -4,37 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do List</title>
     <script
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 
 <body>
-    <div id="container" class="w-auto  min-h-screen max-h-auto  border-2 border-gray-400 p-4 flex flex-col">
-        <div id="Heading" class="m-2 text-2xl font-bold pl-5">
+    <div id="container" class="w-auto  min-h-screen max-h-auto  border-2 border-gray-400 sm:p-2 p-0 flex flex-col">
+        <div id="Heading" class="m-2 text-2xl font-bold sm:pl-3 pl-0">
             To Do List
         </div>
         <form id="Input_bar" class=" flex">
-            <input type="text" placeholder="Add Your Task" class="w-[90vw] rounded-lg" id="input_field">
-            <button type="submit" id="task_submit" class="border-2  rounded-lg px-6 mx-3 bg-blue-500 text-white">Submit</button>
+            <input type="text" placeholder="Add Your Task" class="w-[90vw] rounded-lg sm:m-0 mx-2" id="input_field">
+            <button type="submit" id="task_submit"
+                class="border-2  rounded-lg sm:px-6 sm:mx-3 px-2 bg-blue-500 text-white">Submit</button>
         </form>
         <div id="task_pool" class=" flex flex-col p-3 pl-0">
-            <div  class="Task flex border border-black m-4 ml-0 rounded-lg p-4 text-md">
-                <button id="complete_button" class="px-3">
+            <div class="Task flex justify-center items-center border border-black m-4 ml-3 sm:mr-4 mr-0 sm:ml-0 rounded-lg p-4 text-md">
+                <button id="complete_button" class="px-3 flex justify-center items-center">
                     <span class="material-symbols-outlined">
                         radio_button_unchecked
                     </span>
                 </button>
-                    <!-- <span class="material-symbols-outlined">
+                <!-- <span class="material-symbols-outlined">
                         radio_button_unchecked
                     </span> -->
                 <div id="content" class="flex-grow text-xl font-medium">Task 1</div>
-                <button id="Edit" class="bg-black text-white px-4 py-1 rounded-lg mx-3">Edit</button>
-                <button id="Delete" class="bg-[#FF0000] text-white px-4 py-1 rounded-lg mx-3">Delete</button>
+                <button id="Edit" class="bg-black text-white p-1  rounded-lg mx-3">
+                    <span
+                        class="material-symbols-outlined flex justify-center items-center">
+                        edit
+                    </span>
+                </button>
+                <button id="Delete" class="bg-[#FF0000] text-white px-2 py-2 rounded-lg mx-3">
+                    <span
+                        class="material-symbols-outlined flex justify-center items-center">
+                        delete
+                    </span>
+                </button>
             </div>
+        </div>
+        <div id="label" class="ml-3 text-md font-semibold">
+            <div class="border w-fit h-fit px-3 py-2 rounded-md bg-green-100 flex">
+                <span class="material-symbols-outlined">
+                    done_all
+                </span>
+                <div class="pl-2">
+                    Completed
+                </div>
+            </div>
+        </div>
+        <div id="completed_task_pool" class="lg:ml-9 ml-3 mr-2">
+            <div class="CompletedTask flex border border-black m-4 ml-3 sm:mr-4 mr-0 sm:ml-0 rounded-lg p-4 text-md">
+                <button id="complete_button" class="px-3">
+                    <span class="material-symbols-outlined">
+                        task_alt
+                    </span>
+                </button>
+                <!-- <span class="material-symbols-outlined">
+                        radio_button_unchecked
+                    </span> -->
+                <div id="content" class="flex-grow text-xl font-medium"><s>Task 1</div>
+                <button id="Delete" class="bg-[#FF0000] text-white px-2 py-2 rounded-lg mx-3">
+                    <span
+                        class="material-symbols-outlined flex justify-center items-center">
+                        delete
+                    </span>
+                </button>
+            </div>
+
         </div>
     </div>
     </div>
